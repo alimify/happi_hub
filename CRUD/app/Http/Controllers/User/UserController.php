@@ -30,48 +30,4 @@ class UserController extends Controller
     {
         return $this->updateResponse($request, $id);
     }
-
-    /**
-     * self_profile
-     *
-     * @param  mixed $request
-     * @return void
-     */
-    public function self_profile(Request $request)
-    {
-        return response()->json([
-            'success' => $request->user() != null,
-            'data' => $request->user(),
-        ]);
-    }
-
-    /**
-     * self_profile_update
-     *
-     * @param  mixed $request
-     * @return void
-     */
-    public function self_profile_update(ValidateUserStore $request)
-    {
-        $id = auth()->id();
-
-        return $this->updateResponse($request, $id);
-    }
-
-    /**
-     * self_logout
-     *
-     * @param  mixed $request
-     * @return void
-     */
-    public function self_logout(Request $request)
-    {
-        $logout = $request->user()->currentAccessToken()->delete();
-
-        return response()->json([
-            'success' => $logout,
-            'message' => $logout ? "Succesfully logged out" : "Something went wrong",
-        ]);
-    }
-
 }
