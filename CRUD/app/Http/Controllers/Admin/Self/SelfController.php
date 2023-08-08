@@ -1,23 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin\Self;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\ValidateUserStore;
-use App\Models\User;
+use App\Http\Requests\ValidateAdminStore;
+use App\Models\Admin;
 use App\Traits\CommonCrudTrait;
 use Illuminate\Http\Request;
 
 class SelfController extends Controller
-{    
-    /**
-     * model
-     *
-     * @var undefined
-     */
-    public $model = User::class;
-    
+{
     use CommonCrudTrait;
+    
+    public $model = Admin::class;
+
     /**
      * profile
      *
@@ -38,7 +34,7 @@ class SelfController extends Controller
      * @param  mixed $request
      * @return void
      */
-    public function update(ValidateUserStore $request)
+    public function update(ValidateAdminStore $request)
     {
         return $this->updateResponse($request, auth()->id());
     }
@@ -60,4 +56,5 @@ class SelfController extends Controller
             'message' => $logout ? "Succesfully logged out" : "Something went wrong",
         ]);
     }
+
 }

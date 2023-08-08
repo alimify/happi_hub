@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateAdminStore;
 use App\Models\Admin;
 use App\Traits\AuthTrait;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {

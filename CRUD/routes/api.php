@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminUserController;
-use App\Http\Controllers\Admin\AuthController;
-use App\Http\Controllers\Admin\SelfController;
-use App\Http\Controllers\Admin\UserController;
-use App\Http\Controllers\User\AuthController as UserAuthController;
-use App\Http\Controllers\User\SelfController as UserSelfController;
-use App\Http\Controllers\User\UserController as UserUserController;
+use App\Http\Controllers\Admin\AdminUser\AdminUserController;
+use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\Self\SelfController;
+use App\Http\Controllers\Admin\User\UserController;
+use App\Http\Controllers\User\Auth\AuthController as UserAuthController;
+use App\Http\Controllers\User\Self\SelfController as UserSelfController;
+use App\Http\Controllers\User\User\UserController as UserUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

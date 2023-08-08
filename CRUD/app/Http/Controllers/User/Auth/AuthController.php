@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\User\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ValidateUserStore;
 use App\Models\User;
 use App\Traits\AuthTrait;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
